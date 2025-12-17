@@ -57,9 +57,9 @@ void setup() {
     }
   }
 
-  // Set accelerometer settings (MUST match calibration)
-  IMU.setAccelFS(3);    // ±8g
-  IMU.setAccelODR(5);   // 476Hz
+  // NOTE: Arduino_LSM9DS1 library uses default settings
+  // No setAccelFS() or setAccelODR() functions available
+  // Library defaults are fine for this application
 
   // Initialize Madgwick filter
   filter.begin(50);  // 50Hz update rate
